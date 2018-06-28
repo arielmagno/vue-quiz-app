@@ -1,19 +1,19 @@
 <template>
-         <div class='game d-flex align-items-center'>
-
-    <div class="container fluid">
-
+<div class="container fluid">
+    <div class="card">
         <b-card bg-variant="dark" text-variant="white">
-        <question v-bind:question='question'></question>
-        <answers v-bind:answers='object' v-on:nextQuestion='getQuestion($event)'>
-</answers>
+        <h1 class="text-center"><question v-bind:question='question'></question></h1>
+        <h3><answers v-bind:answers='object' v-on:nextQuestion='getQuestion($event)'>
+</answers></h3>
+        <h3><span> Score</span> <p>{{this.result.corrects}}</p></h3>
         </b-card>
     </div>
-    </div>
+</div>
 </template>
 <script>
 import Questions from "./Questions.vue";
 import Answers from "./Answers.vue";
+import Score from "./Score.vue"
 
 export default {
   data: function() {
@@ -31,7 +31,8 @@ export default {
   },
   components: {
     question: Questions,
-    answers: Answers
+    answers: Answers,
+    score: Score
   },
   methods: {
     getQuestion: function(answer) {

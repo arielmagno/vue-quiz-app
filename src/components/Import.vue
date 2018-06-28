@@ -8,7 +8,7 @@
         <label for="user">Enter your username:</label>
         <input type="text"  v-model="upload.username" >
         <button v-on:click="sendData()">Upload</button>
-        <router-link to="results">
+        <router-link to="/results">
         <button >Back</button>
      </router-link>
     </div>

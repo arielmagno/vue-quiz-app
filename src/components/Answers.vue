@@ -1,6 +1,7 @@
 <template>
     <div class='answers'>
-      <div class="container">
+      <div class='container'>
+        <div class='row px-3'>
         <div v-for = 'option in options'>
         <div class='multiple-choice'>
         <button v-bind:class='{
@@ -11,6 +12,7 @@
             !gameActive && selected != correct && option == correct
         }' @click='pickOption(option)' >{{option}}</button>
         </div>
+          </div>
           </div>
           </div>
         <button v-if= '!gameActive' @click='nextQuestion' >Next</button>
@@ -54,7 +56,7 @@ export default {
     this.assign();
   },
   watch: {
-    $props: {
+    '$props': {
       handler: function(val, oldVal) {
         this.assign();
       },
