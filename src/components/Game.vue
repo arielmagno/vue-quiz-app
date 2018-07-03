@@ -1,11 +1,17 @@
 <template>
-<div class="container fluid">
-    <div class="card">
-        <b-card bg-variant="dark" text-variant="white">
+<div class="container fluid" style="width:100%; height:800px" >
+    <div class="card text-center" id="card-container">
+        <b-card bg-variant="dark" text-variant="white" style="width:100%; height:780px">
+          <br><br>
         <h1 class="text-center"><question v-bind:question='question'></question></h1>
-        <h3><answers v-bind:answers='object' v-on:nextQuestion='getQuestion($event)'>
+        <br>
+        <br><br>
+
+        <h3 class="text-center"><answers  v-bind:answers='object' v-on:nextQuestion='getQuestion($event)'>
 </answers></h3>
-        <h3><span> Score</span> <p>{{this.result.corrects}}</p></h3>
+<br><br>
+        <h1 class="text-center"><span> Score: {{this.result.corrects}}</span>
+        </h1>
         </b-card>
     </div>
 </div>
@@ -61,7 +67,20 @@ export default {
 };
 </script>
 <style scoped>
+
 p{
   font-size:20px; 
 }
+
+#card-container{
+  border: groove 15px
+}
+
+
+
+.center{
+  align-content: flex;
+}
+
+
 </style>

@@ -1,20 +1,20 @@
 <template>
   <div class="start">
     <div class="mx-auto col-md-10">
-  <div class="card">
+  <div class="card" id="card-container">
     <div class="card-image">
       <a href="#">
         
-        <img class="card-img-top img-fluid" src="https://snusercontent.global.ssl.fastly.net/listing-banner/4.jpg" alt="Card image cap">
+        <img class="card-img-top img-fluid" id="bg-image" src="https://studentlife.lincolncollege.edu/wp-content/uploads/sites/42/2017/12/trivia-night-grpahic.png" alt="Card image cap">
       </a>
     </div>
-    <div class="card-body mx-auto">
-      <h5 class="card-title">Are you ready to be a millionaire?</h5>
-      <p class="card-text text-danger">BEWARE: This game requires at least 2 million brain cells.</p>
+    <div class="card-body mx-auto" >
+      <h1 class="card-title">Are you ready to use your brain ?</h1>
+      <p class="card-text text-danger">Click Start Game to begin.</p>
       
-      <a href="#" class="btn btn-lg btn-info bottom" @click="getQuestions()">Start Game</a>
+      <a href="#"  class="action-button animate w-400 custom-color my-2" @click="getQuestions()">Start Game</a>
        <router-link to = '/score'>
-     <a href="#" class="btn btn-lg btn-info bottom">View Previous Millionaires</a>
+     <a href="#"  class="action-button animate w-400 custom-color my-2">View Leaderboard</a>
       </router-link>
       <p class="card-text">
       </p>
@@ -51,4 +51,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+p{
+  font-size:30px;
+}
+#bg-image{
+  width: 100%;
+  height:600px;
+  
+}
+
+#card-container{
+  border: groove 15px
+}
+
+.custom-color{
+  background-color: #E2BC79;
+}
 </style>
