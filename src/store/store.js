@@ -19,8 +19,8 @@ export const store = new Vuex.Store({
         }
     }, 
     mutations: {
-        
-        //With the state parameter we can access to the state object of our store. And the questions parameter is the array that we got on the ‘getQuestion’ action.
+        //With the state parameter we can access to the state object of our store. 
+        //And the questions parameter is the array that we got on the ‘getQuestion’ action.
         translateData: function (state, questions) {
             var array = [];
             
